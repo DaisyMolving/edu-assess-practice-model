@@ -1,0 +1,2 @@
+class SubLevelsController < ApplicationController
+end
