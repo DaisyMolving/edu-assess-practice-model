@@ -3,3 +3,89 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+@import "bourbon";
+@import "neat";
+
+
+.header-bar {
+  @include span-columns(12);
+  height: 70px;
+  background: #01294A;
+  background: -webkit-linear-gradient(left, #01294A, #3778B0);
+  background: -o-linear-gradient(right, #01294A, #3778B0);
+  background: -moz-linear-gradient(right, #01294A, #3778B0);
+  background: linear-gradient(to right, #01294A , #3778B0); 
+}
+
+.outside {
+  @include outer-container(100%);
+  @include pad(0px);
+  background-color: #3778B0;
+}
+
+.sidebar {
+  @include span-columns(3);
+  min-height:100vh;
+  background-color: #01294A;
+
+  ul {
+    margin-top: 30px;
+    li {
+      margin-bottom: 5px;
+      width: 100%;
+      background-color: #01294A;
+      color: white;
+    }
+  }
+}
+
+.nav {
+  @include fill-parent;
+  list-style-type: none;
+}
+
+.inner-sidebar {
+  @include span-columns(2);
+  min-height:100vh;
+  background-color: #3778B0;
+
+  ul {
+    margin-top: 60px;
+    li {
+      margin-bottom: 5px;
+      width: 100%;
+      background-color: #588DBA;
+      color: white;
+    }
+  }
+}
+
+.inner-title {
+  @include span-columns(11);
+  background-color: transparent;
+  height: 50px;
+  h2 {
+    color: white;
+    text-align: center;
+  }
+}
+
+.boxes {
+  @include span-columns(7);
+}
+
+.box {
+  @include pad(20px);
+  @include span-columns(3 of 7);
+  margin: 10px;
+  background-color: #6c9ac1;
+  width: 200px;
+  height: 200px;
+}
+
+.footer-bar {
+  @include span-columns(12);
+  height: 50px;
+  background-color: white;
+}
+
