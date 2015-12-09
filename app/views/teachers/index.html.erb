@@ -1,38 +1,99 @@
-<div class="header-bar"></div>
+
+<div class="header-bar-index">
+  <div class="logo-header">
+    <h2>Edu Assess Logo</h2>
+  </div>
+  <div class="index-nav-header">
+    <nav>
+      <a href="">Hi Peter Smith</a>
+      <a href="">Calendar</a>
+      <a href="">Your Account</a>
+      <a href="">Logout</a>
+    </nav>
+  </div>
+</div>
 
 <div class="outside">
 
-  <div class="sidebar">
-    <ul class="nav">
-      <li>Assess Students</li>
-      <li>My Classes</li>
-      <li>My Criteria</li>
-      <li>Criteria Library</li>
-    </ul>
+  <div class="intros-container">
+    <div class="intro-images">
+      <div class="intro-image-container"></div>
+      <div class="intro-image-container"></div>
+      <div class="intro-image-container"></div>  
+    </div>
+    <div class="intro-info">
+      <p>Edu-Assess provides teachers with a platform to assess and mark their students’ work in one place. This prevents duplication, saves time and it’s as easy as 1, 2, 3.</p>
+    </div>
+  </div>  
+
+  <div class="login-container">
+
+    <div class="login-form">
+
+      <h2>Create a <strong>Teacher</strong> Account:</h2>
+      <%= form_for(:teacher, :url => session_path(:teacher)) do |f| %>
+      <%= f.text_field :email, :placeholder => "Enter your Email"%>
+      <br>
+      <br>
+      <%= f.password_field :password, :placeholder => "Enter your Password" %>
+      <br>
+      <br>
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+      <br>
+      <br>
+      <%= f.submit 'Sign in' %>
+      <br>
+      <br>
+      <%= link_to "Forgot your password?", new_password_path(:teacher) %>
+      <% end %>
+    </div>
+
   </div>
 
-  <div class="inner-sidebar">
-    <ul class="nav">
-      <li>My Classes</li>
-      <li>Upcoming Assessments</li>
-      <li>Previous Assessments</li>
-    </ul>
-  </div>
-
-  <div class="boxes">
-
-  <div class="inner-title">
-    <h2>Michael's School Progress Snapshot</h2>
-  </div>
-  
-    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, aperiam.</div>
-    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, rem?</div>
-    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, numquam!</div>
-    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, pariatur?</div>
-    <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, dolore.</div>
-
-  </div>
   
 </div>
 
+<div class="quote-bar-index">
+  <h2>" More time teaching, less time doing paperwork. "</h2>
+</div>
+
+
+<div class="outside">
+
+  <div class="features-container">
+    <div class="features-title">
+      <h2>Features & Benefits</h2>
+    </div>  
+
+    <div class="index-features">
+      <div class="index-feature">
+        <div class="index-feature-title">
+          <h2>Teacher</h2>
+        </div>
+        <ul class="index-feature-list"></ul>
+      </div>
+
+      <div class="index-feature">
+        <div class="index-feature-title">
+          <h2>Student</h2>
+        </div>
+        <ul class="index-feature-list"></ul>
+      </div>
+      <div class="index-feature">
+        <div class="index-feature-title">
+          <h2>Parent</h2>
+        </div>
+        <ul class="index-feature-list"></ul>
+      </div>
+    </div>
+  </div> 
+
+</div>
+
 <div class="footer-bar"></div>
+
+
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>

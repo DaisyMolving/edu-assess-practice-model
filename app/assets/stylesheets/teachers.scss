@@ -2,14 +2,182 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 @import "bourbon";
 @import "neat";
 
+html, body {
+  background-color: #3778B0;
+}
+//This is the Index Page
 
+.header-bar-index {
+  @include span-columns(12);
+  height: 90px;
+  background-color: #2C6FA7;
+  border-bottom: #588DBA 2px solid;
+
+  .logo-header {
+    @include span-columns(5);
+    height: 90px;
+    background-color: transparent;
+    h2 {
+      color: white;
+      margin-left: 23%;
+      margin-top: 5%;
+    }
+
+  }
+  .index-nav-header {
+    @include span-columns(7);
+     height: 90px;
+     background-color: transparent;
+
+    nav {
+      text-align: right;
+      margin-top: 4%;
+      margin-right: 12%;
+      a {
+        text-align: right;
+        display: inline;
+        margin-right: 15px;
+        color: white;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.intros-container {
+  @include span-columns(6.5);
+  @include pad(50px);
+  min-height:90vh;
+  background-color: transparent;
+
+
+  .intro-images {
+    @include span-columns(10);
+    margin-left: 12%;
+    margin-top: 12%;
+
+    .intro-image-container {
+      @include span-columns(3 of 10); 
+      height: 150px;
+      background-color: pink;
+    } 
+  }
+
+  .intro-info {
+    @include span-columns(9); 
+    margin-left: 12%;
+    margin-top: 20px;
+    p {
+      color: white;
+      font-size: 20px;
+    }
+  } 
+
+}
+
+.login-container {
+  @include span-columns(5.5);
+  @include pad(50px);
+  min-height:90vh;
+  background-color: transparent;
+
+  .login-form {
+    @include span-columns(11);
+    height: 300px;
+
+    background-color: transparent;
+    margin-top: 12%;
+    font-size: 18px;
+    color: white;
+
+    #teacher_email, #teacher_password  {
+      @include fill-parent;
+      height: 40px;
+      font-size: 18px;
+    }
+
+    input[name="commit"]  {
+      @include fill-parent;
+      font-size: 20px;
+      background-color: #76B764;
+      border: none;
+      height: 40px;
+    }
+
+    a {
+      color: #01294A;
+    }
+  }   
+}
+
+.quote-bar-index {
+  @include span-columns(12);
+  height: 100px;
+  background: #FC7806; 
+  background: -webkit-linear-gradient(#FC7806, #EB8E38);
+  background: -o-linear-gradient(#FC7806, #EB8E38); 
+  background: -moz-linear-gradient(#FC7806, #EB8E38); 
+  background: linear-gradient(#FC7806, #EB8E38); 
+
+  h2 {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+  }
+}
+
+.features-container {
+  @include span-columns(12);
+  @include pad(50px);
+  padding-top: 0px;
+  min-height:90vh;
+  background-color: transparent;
+
+  .features-title {
+    @include fill-parent;
+    height: 60px;
+    background-color: transparent;
+
+    h2 {
+      color: white;
+      font-size: 40px;
+    }
+  }
+
+  .index-features {
+    @include fill-parent;
+    margin-top: 20px;
+
+    .index-feature {
+      @include span-columns(4);
+      height: 380px;
+      background-color: #588DBA;
+
+      .index-feature-title {
+        @include fill-parent;
+        height: 50px;
+        background-color: transparent;
+        border-bottom: white 1px solid;
+        padding-left: 20px;
+        h2 {
+          color: white;
+        }
+      }
+      .index-feature-list {
+        @include fill-parent;
+      }
+    }
+
+  }
+}
+
+//This is the Show Page
 .header-bar {
   @include span-columns(12);
-  height: 70px;
+  height: 90px;
   background: #01294A;
   background: -webkit-linear-gradient(left, #01294A, #3778B0);
   background: -o-linear-gradient(right, #01294A, #3778B0);
@@ -19,8 +187,11 @@
 
 .outside {
   @include outer-container(100%);
-  @include pad(0px);
-  background-color: #3778B0;
+  background: #2C6FA7; 
+  background: -webkit-linear-gradient(#2C6FA7, #4E8EC4);
+  background: -o-linear-gradient(#2C6FA7, #4E8EC4); 
+  background: -moz-linear-gradient(#2C6FA7, #4E8EC4); 
+  background: linear-gradient(#2C6FA7, #4E8EC4); 
 }
 
 .sidebar {

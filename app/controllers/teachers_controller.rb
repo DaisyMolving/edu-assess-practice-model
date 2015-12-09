@@ -5,11 +5,12 @@ class TeachersController < ApplicationController
     @teachers = Teacher.all
   end
 
-#   # this is a GET
-#   def show
-#     @user = current_user
-#     @projects = current_user.projects  
-#   end
+
+  def show
+    @teacher = current_user
+    @groups = current_user.groups 
+
+  end
 
 #   # GET
 #   def new
